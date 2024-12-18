@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Page</title>
+    <link rel="stylesheet" href="payment.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <main>
+        <div class="payment-container">
+            <h1>Payment Details</h1>
+            <div class="payment-summary">
+                <p>Total Amount: <span id="total-amount">$0.00</span></p>
+            </div>
+            <form id="payment-form">
+                <label for="mobile">Mobile Number:</label>
+                <input type="tel" id="mobile" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" required></textarea>
+
+                <fieldset>
+                    <legend>Payment Method:</legend>
+                    <label>
+                        <input type="radio" name="payment-method" value="cod" checked>
+                        Cash on Delivery
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="upi">
+                        UPI
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="submit-button">Pay Now</button>
+            </form>
+        </div>
+        <script src="payment.js"></script> <!-- Link to your JavaScript file -->
+    </main>
+</body>
+</html>

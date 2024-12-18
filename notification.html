@@ -1,0 +1,177 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notification Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #62d2ec;
+            color: #333;
+            padding: 20px;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color:#074e53;
+            padding: 20px;
+            color: white;
+        }
+
+        .notification-bell {
+            position: relative;
+            cursor: pointer;
+            font-size: 24px;
+        }
+
+        .notification-bell::after {
+            content: attr(data-count);
+            position: absolute;
+            top: -5px;
+            right: -10px;
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            padding: 5px 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .notification-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #82c7d7;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .notification-list {
+            list-style-type: none;
+        }
+
+        .notification {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f4f4f4;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 10px;
+            border-radius: 6px;
+        }
+
+        .notification.unread {
+            background-color: #e6ffe6;
+        }
+
+        .notification p {
+            margin: 0;
+            flex: 1;
+        }
+
+        .notification-actions button {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #82c7d7;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .notification-actions button:hover {
+            background-color: #0a5262;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Shoozzie</h2>
+        <div class="notification-bell" data-count="3" onclick="toggleNotificationCenter()">
+            🔔
+        </div>
+    </header>
+
+    <section class="notification-container hidden" id="notificationCenter">
+        <h1>Notification Center</h1>
+        <ul class="notification-list" id="notificationList">
+            <!-- Notifications will be dynamically generated -->
+        </ul>
+    </section>
+
+    <script>
+        // Sample notification data
+        const notifications = [
+            { id: 1, message: "Your order #12345 has been shipped!", unread: true },
+            { id: 2, message: "Your wishlist item is back in stock!", unread: true },
+            { id: 3, message: "Your refund has been processed.", unread: false }
+        ];
+
+        // Function to render notifications
+        function renderNotifications() {
+            const notificationList = document.getElementById('notificationList');
+            notificationList.innerHTML = ""; // Clear the list
+            notifications.forEach(notification => {
+                const li = document.createElement('li');
+                li.className = `notification ${notification.unread ? 'unread' : ''}`;
+                li.innerHTML = `
+                    <p>${notification.message}</p>
+                    <div class="notification-actions">
+                        <button onclick="markAsRead(${notification.id})">${notification.unread ? 'Mark as Read' : 'Mark as Unread'}</button>
+                        <button onclick="deleteNotification(${notification.id})">Delete</button>
+                    </div>
+                `;
+                notificationList.appendChild(li);
+            });
+            updateNotificationCount();
+        }
+
+        // Function to update the notification count
+        function updateNotificationCount() {
+            const unreadCount = notifications.filter(n => n.unread).length;
+            const bell = document.querySelector('.notification-bell');
+            bell.setAttribute('data-count', unreadCount);
+        }
+
+        // Function to mark a notification as read/unread
+        function markAsRead(id) {
+            const notification = notifications.find(n => n.id === id);
+            notification.unread = !notification.unread;
+            renderNotifications();
+        }
+
+        // Function to delete a notification
+        function deleteNotification(id) {
+            const index = notifications.findIndex(n => n.id === id);
+            notifications.splice(index, 1);
+            renderNotifications();
+        }
+
+        // Function to toggle the notification center visibility
+        function toggleNotificationCenter() {
+            const notificationCenter = document.getElementById('notificationCenter');
+            notificationCenter.classList.toggle('hidden');
+            renderNotifications();
+        }
+
+        // Initial rendering
+        document.addEventListener('DOMContentLoaded', renderNotifications);
+    </script>
+</body>
+</html>

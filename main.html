@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Shoozzie</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #105766;">
+      <div class="container-fluid" style="max-width: 100%; width: 95%;">
+          <a class="navbar-brand" href="#" style="color: white;">Shoozzie</a>
+          
+          <!-- Center the search bar -->
+          <div class="d-flex justify-content-center flex-grow-1">
+              <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" style="width: 400px; margin-left: 40px;"> <!-- Increased left margin -->
+                  <button class="btn btn-outline-warning" type="submit" style="width: 120px;">Search</button>
+              </form>
+          </div>
+  
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                  <li class="nav-item me-3">
+                      <a class="nav-link active" aria-current="page" href="#"><i class='bx bx-home-alt'></i></a>
+                  </li>
+                  <li class="nav-item me-3">
+                      <a class="nav-link" href="./cart.html"><i class='bx bxs-cart-alt'></i></a>
+                  </li>
+                  <li class="nav-item dropdown me-3">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                          Shoozzie
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="package-lock.json"><i class='bx bxs-user-account'></i> My Profile</a></li>
+                          <li><a class="dropdown-item" href="orders.html"><i class='bx bx-package'></i> Orders</a></li>
+                          <li><a class="dropdown-item" href="loginpage.html"><i class='bx bx-log-in'></i> Login</a></li>
+                          <li><a class="dropdown-item" href="#"><i class='bx bxs-heart'></i> Wishlist</a></li>
+                          <li><a class="dropdown-item" href="#"><i class='bx bx-log-out'></i> LogOut</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                      </ul>
+                  </li>
+                  <li class="nav-item dropdown me-3">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="fa-solid fa-ellipsis-vertical"></i>
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <li><a class="dropdown-item" href="notification.html"><i class="fa-solid fa-bell"></i> Notification Center</a></li>
+                          <li><a class="dropdown-item" href="customercare.html"><i class="fa-solid fa-headphones"></i> 24/7 Customer Care</a></li>
+                          <li><a class="dropdown-item" href="#"><i class="fa-solid fa-rectangle-ad"></i> Advertise</a></li>
+                        
+                      </ul>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  
+  
+    
+    <!-- category section -->
+     <div class="category">
+      <a href="https://www.flipkart.com/search?q=menu%20shoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <span>Men</span></a>
+      <a href="https://www.flipkart.com/search?q=womenshoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <span>Women</span></a>
+      <a href="https://www.flipkart.com/search?q=kids%20shoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <span>Kids</span></a>
+      <a href="https://www.flipkart.com/search?q=motorsports%20shoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <span>Motorsport</span></a>
+      <a href="https://www.flipkart.com/search?q=sports%20shoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <span>Sports</span></a>
+      <a href="https://www.flipkart.com/search?q=formal%20shoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <span>Formal</span></a>
+      <a href="https://www.flipkart.com/search?q=casual%20shoes&otracker=search&otracker1=search&marketplace=FLIPKART&as-show=on&as=off"> <span>Casual</span></a>
+     </div>
+    <!-- menu-section -->
+     <div class="menu-section">
+      <div id="menu"><a href="#"><img src="images/nitro.png" height="75px" width="75px" alt=""></a></div>
+      <div id="menu"><a href="#"><img src="images/basketball.png" height="75px" width="75px" alt=""></a></div>
+      <div id="menu"><a href="#"><img src="images/rider.png" height="75px" width="75px" alt=""></a></div>
+      <div id="menu"><a href="#"><img src="images/ferrari.png" height="75px" width="75px" alt=""></a></div>
+      <div id="menu"><a href="#"><img src="images/palermo.png" height="75px" width="75px" alt=""></a></div>
+    </div>   
+    <div class="menu-list">
+      <span>Nitro</span>
+      <span>Basketball</span>
+    <span>Rider</span>
+      <span>Ferrari</span>
+      <span>Palermo</span>
+</div>
+         <!-- Carousel Slider -->
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/shoe1.png" class="d-block w-100"   width="100%" height="500px"  alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/shoe2.png" class="d-block w-100"  width="100%" height="500px"  alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/shoe3.png" class="d-block w-100"  width="100%" height="500px"    alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/shoe4.png" class="d-block w-100"  width="100%" height="500px"    alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/shoe5.png" class="d-block w-100"  width="100%" height="500px"    alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/shoe6.png" class="d-block w-100"  width="100%" height="500px"    alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="images/shoe7.png" class="d-block w-100"  width="100%" height="500px"    alt="...">
+        </div>
+      </div>
+    </div>
+    <!-- gap -->
+     <div class="highlight">
+      <marquee behavior="scroll"direction="left" scrollamount="5" ><img src="images/rocket.png" height="15px" width="15px" alt="">Sale is live! Hurry up!</marquee>
+     </div>
+<!-- Brand-Section -->
+<div class="brand-heading">
+  <h2>BRANDS</h2>
+</div>
+  <div class="brand-section">
+    <div id="brand"><a href="sparx.html"><img src="images/sparx.png" alt=""></a></div>
+    <div id="brand"><a href="adidas.html"><img src="images/adidas.png" alt=""></a></div>
+    <div id="brand"><a href="puma.html"><img src="images/puma.png" alt=""></a></div>
+    <div id="brand"><a href="campus.html"><img src="images/campus.png" alt=""></a></div>
+    <div id="brand"><a href="Nike.html"><img src="images/nikelogo.png" alt=""></a></div>
+    <div id="brand"><a href="Red tape.html"><img src="images/Red tape logo.webp" alt=""></a></div>
+  </div>
+    <!-- Shopping-section -->
+   <div class="shop-heading">
+    
+    
+   </div>
+   <!-- SPARX -->
+   <div class="shop-heading">
+    <h2>SPARX</h2>
+   </div>
+   <div class="shop-section">
+    <div class="box">
+      <a href="sparx 1.html"><img src="images/sparx1.png" alt="" height="150px" width="250px"> </a>
+      <div class="title">
+<h5>Sparx</h5>
+      </div>
+      <div class="description">
+        <p>  Black Converse Sneakers </p>
+        <h3>$49.99</h3>
+      </div>
+    </div>
+
+    <div class="box"><a href="sparx 4.html"><img src="images/sparx4.png" alt="" height="150px" width="250px"></a> 
+      <div class="title">
+<h5>Sparx</h5>
+      </div>
+      <div class="description">
+        <p>  Casual Black Footwear </p>
+        <h3>$69.99</h3>
+      </div></div>
+    <div class="box"><a href="sparx 5.html" alt="" height="150px" width="250px"><img src="images/sparx5.png" alt="" height="150px" width="250px"> </a>
+      <div class="title">
+<h5>Sparx</h5>
+      </div>
+      <div class="description">
+        <p>  Black High-Top Sneakers </p>
+        <h3>$79.99</h3>
+      </div></div>
+    <div class="box"> <a href="sparx 2.html"><img src="images/sparx2.png" alt="" height="150px" width="250px"></a> 
+      <div class="title">
+<h5>Sparx</h5>
+      </div>
+      <div class="description">
+        <p>  Classic Black Sneakers </p>
+        <h3>$59.99</h3>
+      </div></div>
+
+
+      <!-- ADIDAS -->
+
+       <div class="shop-heading">
+        <h2>ADIDAS</h2>
+       </div>
+       <div class="shop-section">
+        <div class="box">
+          <a href="adidas 10.html"><img src="images/adidas10.png" alt="" height="150px" width="250px"> </a>
+          <div class="title">
+    <h5>Adidas</h5>
+          </div>
+          <div class="description">
+            <p>  Elegant Black Slip-Ons </p>
+                <h3>$49.99</h3>
+          </div>
+        </div>
+    
+        <div class="box"><a href="adidas 1.html"><img src="images/adidas1.png" alt="" height="150px" width="250px"></a> 
+          <div class="title">
+    <h5>Adidas</h5>
+          </div>
+          <div class="description">
+            <p>  Black Converse Sneakers</p>
+            <h3>$49.99</h3>
+          </div></div>
+        <div class="box"><a href="adidas 5.html" alt="" height="150px" width="250px"><img src="images/adidas5.png" alt="" height="150px" width="250px"> </a>
+          <div class="title">
+    <h5>Adidas</h5>
+          </div>
+          <div class="description">
+            <p> Black High-Top Sneakers </p>             
+            <h3>$79.99</h3>
+          </div></div>
+        <div class="box"> <a href="adidas 4.html"><img src="images/campus4.png" alt="" height="150px" width="250px"></a> 
+          <div class="title">
+    <h5>Adidas</h5>
+          </div>
+          <div class="description">
+            <p>  Classic Black Sneakers </p>
+            <h3>$59.99</h3>
+          </div></div>
+      
+
+ <!-- PUMA -->
+ <div class="shop-heading">
+  <h2>PUMA</h2>
+ </div>
+ <div class="shop-section">
+  <div class="box">
+    <a href="puma 1.html"><img src="images/puma1.png" alt="" height="150px" width="250px"> </a>
+    <div class="title">
+<h5>Puma</h5>
+    </div>
+    <div class="description">
+      <p>  Black Converse Sneakers </p>
+      <h3>$49.99</h3>
+    </div>
+  </div>
+
+  <div class="box"><a href="puma 2.html"><img src="./images/puma2.png" alt="" height="150px" width="250px"></a> 
+    <div class="title">
+<h5>Puma</h5>
+    </div>
+    <div class="description">
+      <p>  Classic Black Sneakers </p>
+      <h3>$59.99</h3>
+    </div></div>
+  <div class="box"><a href="puma 5.html" alt="" height="150px" width="250px"><img src="images/puma5.png" alt="" height="150px" width="250px"> </a>
+    <div class="title">
+<h5>Puma</h5>
+    </div>
+    <div class="description">
+      <p>  Black High-Top Sneakers </p>
+      <h3>$79.99</h3>
+    </div></div>
+  <div class="box"> <a href="puma 10.html"><img src="https://tse2.mm.bing.net/th?id=OIP.BXUoz3PHbXVKDGL5xy-FpwHaHa&pid=Api&P=0&h=220" alt="" height="150px" width="250px"></a> 
+    <div class="title">
+<h5>Puma</h5>
+    </div>
+    <div class="description">
+      <p>  Elegant Black Slip-Ons </p>
+      <h3>$49.99</h3>
+    </div></div>
+
+
+
+           <!-- CAMPUS -->
+          <div class="shop-heading">
+            <h2>CAMPUS</h2>
+           </div>
+           <div class="shop-section">
+            <div class="box">
+              <a href="campus 1.html"><img src="images/Campus1.png" alt="" height="150px" width="250px"> </a>
+              <div class="title">
+        <h5>Campus</h5>
+              </div>
+              <div class="description">
+                <p>  Black Converse Sneakers </p>
+                <h3>$49.99</h3>
+              </div>
+            </div>
+        
+            <div class="box"><a href="campus 2.html"><img src="./images/cqmpus2.png" alt="" height="150px" width="250px"></a> 
+              <div class="title">
+        <h5>Campus</h5>
+              </div>
+              <div class="description">
+                <p>  Casual Black Footwear </p>
+                <h3>$69.99</h3>
+              </div></div>
+            <div class="box"><a href="campus 5.html" alt="" height="150px" width="250px"><img src="images/campus5.png" alt="" height="150px" width="250px"> </a>
+              <div class="title">
+        <h5>Campus</h5>
+              </div>
+              <div class="description">
+                <p>  Black High-Top Sneakers </p>
+                <h3>$79.99</h3>
+              </div></div>
+            <div class="box"> <a href="campus 6.html"><img src="https://img.tatacliq.com/images/i9/437Wx649H/MP000000012502423_437Wx649H_202212170312361.jpeg" alt="" height="150px" width="250px"></a> 
+              <div class="title">
+        <h5>Campus</h5>
+              </div>
+              <div class="description">
+                <p>  Stylish Black Trainers </p>
+                <h3>$54.99</h3>
+              </div></div>
+
+
+              <!-- RED TAPE -->
+          <div class="shop-heading">
+            <h2>RED TAPE</h2>
+           </div>
+           <div class="shop-section">
+            <div class="box">
+              <a href="red tape 1.html"><img src="images/rt1.png" alt="" height="150px" width="250px"> </a>
+              <div class="title">
+        <h5>Red Tape</h5>
+              </div>
+              <div class="description">
+                <p>  Black Converse Sneakers </p>
+                <h3>$49.99</h3>
+              </div>
+            </div>
+        
+            <div class="box"><a href="red tape 2.html"><img src="./images/rt2.png" alt="" height="150px" width="250px"></a> 
+              <div class="title">
+        <h5>Red Tape</h5>
+              </div>
+              <div class="description">
+                <p>  Casual Black Footwear </p>
+                <h3>$69.99</h3>
+              </div></div>
+            <div class="box"><a href="red tape 3.html" alt="" height="150px" width="250px"><img src="images/rt3.png" alt="" height="150px" width="250px"> </a>
+              <div class="title">
+        <h5>Red Tape</h5>
+              </div>
+              <div class="description">
+                <p> Sporty Black Shoes </p>
+                <h3>$39.99</h3>
+              </div></div>
+            <div class="box"> <a href="red tape 4.html"><img src="images/rt4.png" alt="" height="150px" width="250px"></a> 
+              <div class="title">
+        <h5>Red Tape</h5>
+              </div>
+              <div class="description">
+                <p> Casual Black Footwear</p>
+                <h3>$69.99</h3>
+              </div></div>
+
+
+              <!-- Nike -->
+          <div class="shop-heading">
+            <h2>Nike</h2>
+           </div>
+           <div class="shop-section">
+            <div class="box">
+              <a href="nike 8.html"><img src="images/shoe4.png" alt="" height="150px" width="250px"> </a>
+              <div class="title">
+        <h5>Nike</h5>
+              </div>
+              <div class="description">
+                <p>  Black Canvas Shoes </p>
+                <h3>$39.99</h3>
+              </div>
+            </div>
+        
+            <div class="box"><a href="nike 9.html"><img src="https://tse3.mm.bing.net/th?id=OIP.e7QPsuPwZLFxByLM1rXv6wHaE8&pid=Api&P=0&h=220" alt="" height="150px" width="250px"></a> 
+              <div class="title">
+        <h5>Nike</h5>
+              </div>
+              <div class="description">
+                <p>  Black Running Shoes </p>
+                <h3>$59.99</h3>
+              </div></div>
+            <div class="box"><a href="nike 1.html" alt="" height="150px" width="250px"><img src="https://th.bing.com/th/id/OIP.LWue3Q0_FRU8yO4FIC8zdgAAAA?w=474&h=474&rs=1&pid=ImgDetMain" alt="" height="150px" width="250px"> </a>
+              <div class="title">
+        <h5>Nike</h5>
+              </div>
+              <div class="description">
+                <p> Black Converse Sneakers </p>
+                <h3>$49.99</h3>
+              </div></div>
+            <div class="box"> <a href="nike 3.html"><img src="https://th.bing.com/th/id/R.8d566d3cb371078a027c7e10bc8c6f0a?rik=Ppll5GrgY5BMeQ&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fYlIEP0X.jpg&ehk=hSOTLr%2bY3SB7eAj1yVki0FnbhKW7N%2fTywTBOEug%2bBa4%3d&risl=&pid=ImgRaw&r=0" alt="" height="150px" width="250px"></a> 
+              <div class="title">
+        <h5>Nike</h5>
+              </div>
+              <div class="description">
+                <p>  Sporty Black Shoes </p>
+                <h3>$39.99</h3>
+              </div></div>
+              <div class="footer">
+
+              </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.profile-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.profile-sidebar {
+    width: 30%;
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-sidebar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.profile-sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.profile-sidebar p {
+    margin-bottom: 20px;
+    color: #b5b5b5;
+}
+
+.profile-nav {
+    list-style: none;
+    padding: 0;
+}
+
+.profile-nav li {
+    margin: 10px 0;
+}
+
+.profile-nav li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.profile-content {
+    width: 70%;
+    padding: 20px;
+}
+
+.profile-content h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.profile-form .form-group {
+    margin-bottom: 20px;
+}
+
+.profile-form label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.profile-form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-save {
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-save:hover {
+    background-color: #34495e;
+}
+
+.address-section {
+    margin-top: 40px;
+}
+
+.address-section h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.address-card {
+    background-color: #f8f8f8;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.address-card p {
+    margin: 0;
+}
+
+.edit-link {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.btn-add-address {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-add-address:hover {
+    background-color: #2980b9;
+}
+
+</style>
+<body>
+
+    <div class="profile-container">
+        <div class="profile-sidebar">
+            <img src="https://th.bing.com/th/id/OIP.CNjBHcbZWvzBMRcQwh3d9wHaHa?w=612&h=612&rs=1&pid=ImgDetMain" alt="Profile Picture" class="profile-img">
+            <h2>John Doe</h2>
+            <p>johndoe@example.com</p>
+            <ul class="profile-nav">
+                <li><a href="#">Personal Information</a></li>
+                <li><a href="#">Address Book</a></li>
+                <li><a href="#">Order History</a></li>
+                <li><a href="#">Wishlist</a></li>
+                <li><a href="#">Saved Payment Methods</a></li>
+                <li><a href="#">Password & Security</a></li>
+                <li><a href="#">Notifications & Preferences</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+
+        <div class="profile-content">
+            <h1>Personal Information</h1>
+            <form class="profile-form">
+                <div class="form-group">
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" value="John">
+                </div>
+                <div class="form-group">
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" value="Doe">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="johndoe@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" value="+123456789">
+                </div>
+                <button type="submit" class="btn-save">Save Changes</button>
+            </form>
+
+            <div class="address-section">
+                <h2>Address Book</h2>
+                <div class="address-card">
+                    <p><strong>Home Address:</strong> 123 Main St, City, Country</p>
+                    <a href="#" class="edit-link">Edit</a>
+                </div>
+                <div class="address-card">
+                    <p><strong>Office Address:</strong> 456 Work St, City, Country</p>
+                    <a href="#" class="edit-link">Edit</a>
+                </div>
+                <button class="btn-add-address">Add New Address</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

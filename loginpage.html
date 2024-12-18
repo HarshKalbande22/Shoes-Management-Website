@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F4F4F9;
+}
+
+.login-container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.login-form {
+    width: 50%;
+    background-color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #FF6F61;
+}
+
+h2 {
+    font-size: 18px;
+    color: #888;
+    margin-top: 15px;
+}
+
+h3 {
+    font-size: 20px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.input-field {
+    margin-bottom: 20px;
+}
+
+.input-field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.input-field input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.sign-in-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF6F61;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.sign-up {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.sign-up p {
+    font-size: 12px;
+    color: #999;
+}
+
+.sign-up a {
+    color: #FF6F61;
+    text-decoration: none;
+}
+
+.login {
+    width: 50%;
+    background-color: #FDEEEA; 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login img {
+    width: 80%; 
+    height: auto;
+}
+</style>
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <div class="logo">
+                <h1>Shoozzie</h1>
+            </div>
+            <h2>Welcome back !!!</h2>
+            <h3>Login-in</h3>
+            <form action="#">
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="test@gmail.com" required>
+                </div>
+                <div class="input-field">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="*" required>
+                    
+                </div>
+                <button type="submit" class="sign-in-btn">LOGIN IN</button>
+            </form>
+            <div class="sign-up">
+                <p>I don't have an account? <a href="#">Sign up</a></p>
+            </div>
+        </div>
+        <div class="login">
+            <img src="images/loginimage.png" alt="Login image">
+        </div>
+    </div>
+</body>
+</html>
